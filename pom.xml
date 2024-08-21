@@ -7,7 +7,7 @@
     <groupId>ku.cs</groupId>
     <artifactId>lab</artifactId>
     <version>1.0</version>
-    <name>lab211-661</name>
+    <name>assignment-07-junit-test-Chonapatcc</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,12 +19,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.6</version>
+            <version>21</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.6</version>
+            <version>21</version>
         </dependency>
 
         <dependency>
