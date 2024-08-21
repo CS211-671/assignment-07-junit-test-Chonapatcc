@@ -27,7 +27,7 @@ class StudentTest {
     @Test
     void testChangeName() {
         Student s = new Student("6xxxxxxxxx", "StudentTest");
-        String newName = "cat";
+        String newName = "cat".trim();
         s.changeName(newName);
         assertEquals(newName, s.getName());
     }

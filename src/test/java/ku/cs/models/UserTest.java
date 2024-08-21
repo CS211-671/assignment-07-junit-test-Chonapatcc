@@ -13,7 +13,7 @@ class UserTest {
         User user = new User("user01", "plain-p@ssw0rd");
         String actual = user.getPassword();
         String unexpected = "plain-p@ssw0rd";
-        assertNotEquals(unexpected, actual);
+        assertNotEquals(actual,unexpected);
     }
 
     @Test
@@ -25,19 +25,18 @@ class UserTest {
     }
 
     @Test
-    void isUsername() {
+    void testIsUsername() {
         User user = new User("user01", "plain-p@ssw0rd");
         boolean actual = user.isUsername("user01");
         assertTrue(actual);
     }
 
     @Test
-    void setPassword() {
+    void testSetPassword() {
         User user = new User("user01", "plain-p@ssw0rd");
-        user.setPassword("plain-p@ssw0rd");
-        String actual = user.getPassword();
-        String unexpected = "plain-p@ssw0rd";
-        assertNotEquals(unexpected, actual);
+        user.setPassword("cat");
+        boolean expected = user.validatePassword("cat");
+        assertTrue(expected);
     }
 
     @Test
@@ -51,15 +50,15 @@ class UserTest {
     void getUsername() {
         User user = new User("user01", "plain-p@ssw0rd");
         String actual = user.getUsername();
-        String unexpected = "plain-p@ssw0rd";
-        assertNotEquals(unexpected, actual);
+        String expected = "user01";
+        assertEquals(expected, actual);
     }
 
     @Test
     void getPassword() {
         User user = new User("user01", "plain-p@ssw0rd");
-        String actual = user.getPassword();
-        String unexpected = "plain-p@ssw0rd";
-        assertNotEquals(unexpected, actual);
+        String expected = "plain-p@ssw0rd";
+        boolean actual = user.validatePassword(expected);
+        assertTrue(actual);
     }
 }

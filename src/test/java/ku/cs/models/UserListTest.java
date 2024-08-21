@@ -23,8 +23,9 @@ class UserListTest {
 
         // String actual = user.getUsername();
         // assertEquals(expected, actual);
-        assertEquals(user.getUsername(),"Cat1");
-
+        String actual = user.getUsername();
+        String expected = "Cat1";
+        assertEquals(actual,expected);
     }
 
     @Test
@@ -52,8 +53,6 @@ class UserListTest {
 
         // TODO: call login() with correct username and password
         User actual = userList.login("Cat1","cat1");
-
-
         // TODO: assert that User object is found
         // assertEquals(expected, actual);
         assertNotNull(actual);
@@ -75,7 +74,6 @@ class UserListTest {
         // TODO: assert that the method return null
         // assertNull(actual);
         assertNotNull(actual);
-
     }
 
 }

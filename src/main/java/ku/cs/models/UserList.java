@@ -34,17 +34,19 @@ public class UserList {
             return false;
         if(user.validatePassword(oldPassword)){
             user.setPassword(newPassword);
-            return true;}
+            return true;
+        }
         else{
             return false;
         }
-
     }
 
     //TODO: implements this method to find user in users with valid password
     //TODO: return User object if username and password is correct, otherwise return null
     public User login(String username, String password) {
         User user = findUserByUsername(username);
+        if(user==null)
+            return null;
         if(user.validatePassword(password))
         {
             return user;
