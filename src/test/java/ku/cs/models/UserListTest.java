@@ -69,11 +69,11 @@ class UserListTest {
         userList.addUser("Cat3","cat3");
 
         // TODO: call login() with incorrect username or incorrect password
-        User actual = userList.login("Cat1","cat1");
+        User actual = userList.login("Cat1","cat11");
 
         // TODO: assert that the method return null
         // assertNull(actual);
-        assertNotNull(actual);
+        assertNull(actual);
     }
 
 }

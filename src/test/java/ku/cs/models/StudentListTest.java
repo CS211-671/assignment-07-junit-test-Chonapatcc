@@ -36,7 +36,7 @@ class StudentListTest {
     }
 
     @Test
-    void viewGradeOfId() {
+    void testViewGradeOfId() {
         StudentList studentList = new StudentList();
         studentList.addNewStudent("1", "cat");
         studentList.giveScoreToId("1",100);

@@ -40,14 +40,14 @@ class UserTest {
     }
 
     @Test
-    void validatePassword() {
+    void testValidatePassword() {
         User user = new User("user01", "plain-p@ssw0rd");
         boolean actual = user.validatePassword("plain-p@ssw0rd");
         assertTrue(actual);
     }
 
     @Test
-    void getUsername() {
+    void testGetUsername() {
         User user = new User("user01", "plain-p@ssw0rd");
         String actual = user.getUsername();
         String expected = "user01";
@@ -55,7 +55,7 @@ class UserTest {
     }
 
     @Test
-    void getPassword() {
+    void testGetPassword() {
         User user = new User("user01", "plain-p@ssw0rd");
         String expected = "plain-p@ssw0rd";
         boolean actual = user.validatePassword(expected);
