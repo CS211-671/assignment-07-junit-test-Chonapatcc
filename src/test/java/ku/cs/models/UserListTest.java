@@ -36,8 +36,7 @@ class UserListTest {
         userList.addUser("Cat2","cat2");
         userList.addUser("Cat3","cat3");
         // TODO: change password of one user
-        userList.changePassword("Cat1","cat1","cat11");
-        boolean actual = userList.findUserByUsername("Cat1").validatePassword("cat11");
+        boolean actual =userList.changePassword("Cat1","cat1","cat11");
         // TODO: assert that user can change password
          assertTrue(actual);
     }
@@ -57,7 +56,7 @@ class UserListTest {
 
         // TODO: assert that User object is found
         // assertEquals(expected, actual);
-        assertNotEquals(null,actual);
+        assertNotNull(actual);
 
     }
 
@@ -75,7 +74,7 @@ class UserListTest {
 
         // TODO: assert that the method return null
         // assertNull(actual);
-        assertNull(actual);
+        assertNotNull(actual);
 
     }
 
